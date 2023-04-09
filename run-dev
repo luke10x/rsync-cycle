@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -o nounset -o errexit
+
+PROJECT_DIR=$(pwd)
+
+mvn clean package
+
+mvn spring-boot:run -Dspring-boot.run.arguments="$@"
+

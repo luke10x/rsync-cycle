@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -o nounset -o errexit
+
+PROJECT_DIR=$(pwd)
+
+mvn clean package
+
+cd $HOME
+
+
+WAR=$PROJECT_DIR/target/rsync-cycle-1.0.0-SNAPSHOT.war
+
+jar tf $WAR 
+
+java -jar $WAR "$@"
+
+

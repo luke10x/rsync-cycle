@@ -7,7 +7,7 @@
   <groupId>dev.luke10x</groupId>
   <artifactId>rsync-cycle</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>Rsync Cycle</name>
   <description>Rsync Cycle is a schedule manager and runner for rsync path provisions</description>
@@ -178,8 +178,8 @@
       -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.2.0</version>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.2</version>
         <configuration>
           <archive>
             <manifest>
