@@ -1,0 +1,21 @@
+server:
+  port: ${PORT:8080}
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:xeduler
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+
+  resources:
+    static-locations: file:/var/www/static,classpath:static
+
+## We do not need this because we use H2ConsoleConfiguration
+#  spring:
+#    h2:
+#      console:
+#        enabled: true
